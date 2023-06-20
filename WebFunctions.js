@@ -10,15 +10,12 @@ var red = document.getElementById("Red");
 var green = document.getElementById("Green");
 var blue = document.getElementById("Blue");
 var timing_buggy = document.getElementById("Timing_buggy");
-// var timing_bf = document.getElementById("Timing_b_f");
-var timing_bf = 50;
+var timing_bf = document.getElementById("Timing_b_f");
 
 
 function rbg() {
 	UART.write(`rbgLed(${green.value},${red.value},${blue.value});\n`);
-	console.log(red.value);
-	console.log(green.value);
-	console.log(blue.value);
+	console.log(red.value, " ", green.value, " ", blue.value);
 }
 
 
@@ -39,4 +36,9 @@ function notify(){
 function back_n_forward(){
 	UART.write(`back_n_forward(${timing_bf.value});\n`);
 	console.log(timing_bf.value);
+}
+
+function back_n_forward(v){
+	UART.write(`back_n_forward(${v});\n`);
+	console.log(v);
 }

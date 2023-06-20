@@ -20,7 +20,7 @@
         
         <!-- Motion - 3 columns -->
         <div class="col-2" style="margin:auto">
-            <a class="btn btn-success mt-5 mb-3 btn-block btn-water btn-lg" onclick="UART.write(`back_n_forward(1);`);"><img src="images/back-and-forth.png"></a>
+            <a class="btn btn-success mt-5 mb-3 btn-block btn-water btn-lg" onclick="back_n_forward(200);"><img src="images/back-and-forth.png"></a>
             <!-- <a class="btn btn-warning mt-5 mb-3 btn-block btn-water btn-lg" onclick="notify();">Notification(buggy)</a> -->
         </div>
         <div class="col-2">
@@ -40,7 +40,7 @@
         </div>
 
         <div class="col-2" style="margin:auto">
-            <a class="btn btn-warning mt-5 mb-3 btn-block btn-water btn-lg g-0" onclick="back_n_forward(1);"><img src="images/vibrate.png"></a>
+            <a class="btn btn-warning mt-5 mb-3 btn-block btn-water btn-lg g-0" onclick="back_n_forward(20);"><img src="images/vibrate.png"></a>
         </div>
 
         <!-- Vertical divider - 1 column -->
@@ -50,8 +50,6 @@
             </div>
 
         </div>
-
-        <!-- this is a change -->
         
         <!-- Lights - 5 columns -->
     
@@ -73,37 +71,39 @@
                     <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,255,0);\n`);">Red</a>  
                     <div class="slidecontainer mt-2" style="height:200px;">
                         <input style="transform: rotate(0.75turn) translateX(-85px) translateY(-65px); height:30px; width:200px;" 
-                            type="range" min="0" max="255" value="0" class="slider sliderRed" id="Red">
+                            type="range" min="0" max="255" value="0" class="slider sliderRed" id="Red" onchange="rbg();">
                     </div>
-                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">
-                    Off</a>
+                   <!-- <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">
+                    Off</a> -->
                 </div>
                 <div class="col-1" style="margin:auto">  
                     <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(255,0,0);\n`);">
                     Green</a>
                     <div class="slidecontainer mt-2" style="height:200px;">
                         <input style="transform: rotate(0.75turn) translateX(-85px) translateY(-65px); height:30px; width:200px;" 
-                            type="range" min="0" max="255" value="0" class="slider sliderGreen" id="Green">
+                            type="range" min="0" max="255" value="0" class="slider sliderGreen" id="Green" onchange="rbg();">
                     </div>
-                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">
-                        Off</a>
+                    <!-- <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">
+                        Off</a> -->
                 </div>
                 <div class="col-1" style="margin:auto">
                     <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,0,255);\n`);">
                         Blue</a>
                     <div class="slidecontainer mt-2" style="height:200px;">
                         <input style="transform: rotate(0.75turn) translateX(-85px) translateY(-65px); height:30px; width:200px;" 
-                            type="range" min="0" max="255" value="0" style="width: 75px" class="slider sliderBlue" id="Blue">
+                            type="range" min="0" max="255" value="0" style="width: 75px" class="slider sliderBlue" id="Blue" onchange="rbg();">
                     </div>
-                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">Off</a>
+                    <!-- <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">Off</a> -->
                     </div>
                     <div class="col-1" style="margin:auto ">
-                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,255,0);\n`);">Blink<br />Fast</a>
-                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,255,0);\n`);">Blink<br />Slow</a>
-                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">Blink<br />Off</a>
+                        <!-- <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,255,0);\n`);">Blink<br />Fast</a> -->
+                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="rbgFading();">Blink<br />Slow</a>
+                        <!-- <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">Blink<br />Off</a> -->
                         
+                        <!--
                         <a class="btn btn-warning mt-3 btn-block btn-water btn-lg" onclick="rbg();">Update Static RGB</a>
                         <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" onclick="rbgFading();">Update Fading RGB</a>
+                        -->
                         
 
                     </div>
@@ -122,6 +122,8 @@
 
     </div>
 </div>
+
+<a class="btn btn-info text-align btn-connected" onclick="UART.write(`locoStop();\n;rbgOff();\n`);">Connect / Reset</a>
 
 
 <script src="https://www.espruino.com/js/uart.js"></script>

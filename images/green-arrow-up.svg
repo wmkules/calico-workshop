@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196.73 99.04">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+        font-family: Arial-Black, 'Arial Black';
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .cls-2 {
+        letter-spacing: .02em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        fill: #39b54a;
+      }
+
+      .cls-5 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-4" points="196.73 36.01 143.73 36.01 142.82 99.04 54.29 99.04 54.29 36.01 0 36.01 98.92 0 196.73 36.01"/>
+  <text class="cls-1" transform="translate(71.49 40.02)"><tspan class="cls-3" x="0" y="0">F</tspan><tspan x="7.59" y="0">or</tspan><tspan class="cls-5" x="20.92" y="0">w</tspan><tspan x="32.12" y="0">a</tspan><tspan class="cls-2" x="40.12" y="0">r</tspan><tspan x="45.74" y="0">d</tspan></text>
+</svg>

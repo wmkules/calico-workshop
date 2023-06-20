@@ -1,0 +1,137 @@
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="human.css">
+
+    <title>Calico Robot Controller</title>
+</head>
+<body >
+<h1 style="text-align: center;">Calico Robot Controller</h1>
+
+<div class="container-fluid">
+    <!-- <a class="btn btn-info float-right btn-connected" onclick="UART.write(`locoStop();\n`)">Connect</a> -->
+    <div class="row">
+        
+        <!-- Motion - 3 columns -->
+        <div class="col-2" style="margin:auto">
+            <a class="btn btn-success mt-5 mb-3 btn-block btn-water btn-lg" onclick="UART.write(`back_n_forward(1);`);"><img src="images/back-and-forth.png"></a>
+            <!-- <a class="btn btn-warning mt-5 mb-3 btn-block btn-water btn-lg" onclick="notify();">Notification(buggy)</a> -->
+        </div>
+        <div class="col-2">
+            <a class="btn btn-warning mt-2 btn-block btn-water btn-lg"
+            onclick="UART.write(`mb();\n`);"><img src="images/green-arrow-up.svg"></a>
+            <a class="btn btn-warning mt-2 btn-block btn-water btn-lg"
+            onclick="UART.write(`moveBackward(1000);\n`);"><img src="images/green-arrow-up-1sec.svg" style="width:50%"></a>
+
+            
+            <a class="btn btn-warning mt-2 mb-3 btn-block btn-water btn-lg"
+            onclick="UART.write(`locoStop();\n`);"><img src="images/stop.svg"></a>
+            
+            <a class="btn btn-warning mt-2 mb-3 btn-block btn-water btn-lg"
+            onclick="UART.write(`moveForward(1000);\n`);"><img src="images/green-arrow-down-1sec.svg" style="width:50%"></a>
+            <a class="btn btn-warning mt-2 mb-3 btn-block btn-water btn-lg"
+            onclick="UART.write(`mf();\n`);"><img src="images/green-arrow-down.svg"></a>
+        </div>
+
+        <div class="col-2" style="margin:auto">
+            <a class="btn btn-warning mt-5 mb-3 btn-block btn-water btn-lg g-0" onclick="back_n_forward(1);"><img src="images/vibrate.png"></a>
+        </div>
+
+        <!-- Vertical divider - 1 column -->
+       <div class="col-1">
+            <div style="background-color: black; width:4px; height:600px;">
+                &nbsp;
+            </div>
+
+        </div>
+        
+        <!-- Lights - 5 columns -->
+    
+        <div class="col-5" style="margin:auto">
+            <div class="row justify-content-md-center">
+                <div class="col-5">
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" onclick="UART.write(`rbgLed(55,55,55);\n`);">White</a>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-1" style="margin:auto">
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rgbAutoChanging_slow();\n`);">
+                        Seq<br />Slow</a>
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rgbAutoChanging_fast();\n`);">
+                        Seq<br />Fast</a>
+                </div>
+                <div class="col-1" style="margin:auto">
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,255,0);\n`);">Red</a>  
+                    <div class="slidecontainer mt-2" style="height:200px;">
+                        <input style="transform: rotate(0.75turn) translateX(-85px) translateY(-65px); height:30px; width:200px;" 
+                            type="range" min="0" max="255" value="0" class="slider sliderRed" id="Red">
+                    </div>
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">
+                    Off</a>
+                </div>
+                <div class="col-1" style="margin:auto">  
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(255,0,0);\n`);">
+                    Green</a>
+                    <div class="slidecontainer mt-2" style="height:200px;">
+                        <input style="transform: rotate(0.75turn) translateX(-85px) translateY(-65px); height:30px; width:200px;" 
+                            type="range" min="0" max="255" value="0" class="slider sliderGreen" id="Green">
+                    </div>
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">
+                        Off</a>
+                </div>
+                <div class="col-1" style="margin:auto">
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,0,255);\n`);">
+                        Blue</a>
+                    <div class="slidecontainer mt-2" style="height:200px;">
+                        <input style="transform: rotate(0.75turn) translateX(-85px) translateY(-65px); height:30px; width:200px;" 
+                            type="range" min="0" max="255" value="0" style="width: 75px" class="slider sliderBlue" id="Blue">
+                    </div>
+                    <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">Off</a>
+                    </div>
+                    <div class="col-1" style="margin:auto ">
+                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,255,0);\n`);">Blink<br />Fast</a>
+                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgLed(0,255,0);\n`);">Blink<br />Slow</a>
+                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" style="width: 75px" onclick="UART.write(`rbgOff();\n`);">Blink<br />Off</a>
+                        
+                        <a class="btn btn-warning mt-3 btn-block btn-water btn-lg" onclick="rbg();">Update Static RGB</a>
+                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" onclick="rbgFading();">Update Fading RGB</a>
+                        
+
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-5 ">
+                        <a class="btn btn-warning mt-2 btn-block btn-water btn-lg" 
+                        onclick="UART.write(`rbgOff();\n`);console.log('All off')">All Off</a>
+                    </div>
+                </div>
+           </div>
+        </div>
+
+
+        
+
+    </div>
+</div>
+
+
+<script src="https://www.espruino.com/js/uart.js"></script>
+<script src="WebFunctions.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

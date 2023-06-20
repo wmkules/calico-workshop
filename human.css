@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'Archia Bold';
+    src: url('fonts/archia-bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Archia Medium';
+    src: url('fonts/archia-medium-webfont.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-family: 'Archia Semibold';
+    src: url('fonts/archia-semibold-webfont.woff2') format('woff2');
+}
+
+.dark-mode {
+    background: #161625;
+}
+
+.dark-list {
+    color: rgb(189, 189, 189);
+    font-family: 'Archia Bold';
+    border: 1px solid rgba(189,189,189,.2);
+}
+
+h1 {
+    margin-top: 2rem;
+    color: #db5581;
+    font-family: 'Archia Bold';
+}
+
+.sub-h {
+    color: rgba(108,117,125,.8);
+    font-family: 'Archia Semibold';
+}
+
+path {
+    stroke:rgba(0,123,255,0.6) !important;
+}
+
+.feedback {
+    fill: #28a746a5 !important;
+    stroke: none !important;
+}
+
+.feedback-bad {
+    fill: rgba(255, 164, 7, 0.9) !important;
+    stroke: none !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: rgba(0,123,255,.06274509803921569) !important;
+    font-family: 'Archia Semibold';
+    color: rgba(0,123,255,.6);
+}
+
+circle {
+    fill: rgba(0,123,255,0.6) !important;
+    /*transform-origin: 40% 0%;*/
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+
+#calico circle {
+    fill: rgba(0,123,255,1) !important;
+}
+
+#calico1 circle {
+    fill: rgba(0,123,255,1) !important;
+}
+
+.nav-link {
+    font-family: 'Archia Semibold';
+    color: rgba(108,117,125,.8);
+}
+
+circle:hover {
+    fill:rgba(255,193,7,0.9) !important;
+    /*transform: scale(1.5);*/
+}
+
+.current-node {
+    fill:rgba(255,193,7,0.9) !important;
+    transform: scale(1.5);
+}
+
+.btn-info, .btn-warning {
+    background: rgba(108,117,125,.16274509803921569);
+    color: rgba(108,117,125,.9) !important;
+    font-family: 'Archia Medium';
+    border:none;
+}
+
+.btn-info, .btn-water {
+    background: rgba(108,117,125,.16274509803921569);
+    color: rgba(108,117,125,1) !important;
+    font-family: 'Archia Medium';
+    border:none;
+}
+
+.btn-warning:hover {
+    background: #fd7d144a;
+    color: #fd7d14 !important;
+}
+
+.btn-warning:active {
+    background: #fd7d147c !important;
+}
+
+.btn-info:hover {
+    background: rgba(40,167,69,.22549019607843137);
+    color: #28a745 !important;
+}
+.btn-info:active {
+    background: rgba(40,167,69,.32549019607843137) !important;
+}
+
+.btn-connected {
+    background: rgba(40,167,69,.22549019607843137) !important;
+    color: #28a745 !important;
+}
+
+.exercise-good path {
+    stroke: none !important;
+    fill: #28a746 !important;
+}
+
+.exercise-bad path {
+    stroke: none !important;
+    fill: rgba(255, 164, 7, 0.9) !important;
+}
+
+.exercise-good {
+    z-index: 999;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.exercise-bad {
+    z-index: 999;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.feedicon {
+    margin-top: -1rem;
+}
+
+.progress {
+    background-color: rgba(40,167,69,.2) !important;
+}
+
+.bg-calico-green {
+    background-color: rgba(40,167,69) !important;
+}
+
+/* RGB
+------------------------*/
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #6c757d2a;  /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.sliderWhite::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgba(255,255,255); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.sliderWhite::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgba(255,255,255); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.sliderGreen::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgba(40,167,69); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.sliderGreen::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgba(40,167,69); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.sliderRed::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #de3c4b; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.sliderRed::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #de3c4b; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.sliderBlue::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #0690c6; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.sliderBlue::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #0690c6; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+

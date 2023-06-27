@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.66 249.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+        font-family: Arial-Black, 'Arial Black';
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .cls-2 {
+        letter-spacing: .05em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        fill: #39b54a;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-4" x="10.77" y="26.97" width="71.89" height="134.05"/>
+    <polygon class="cls-4" points="46.71 0 0 26.97 93.42 26.97 46.71 0"/>
+    <polygon class="cls-4" points="10.77 222.1 104.19 161.02 10.77 161.02 10.77 222.1"/>
+  </g>
+  <g>
+    <rect class="cls-4" x="81" y="88.05" width="71.89" height="134.05" transform="translate(233.89 310.15) rotate(180)"/>
+    <polygon class="cls-4" points="116.95 249.07 163.66 222.1 70.23 222.1 116.95 249.07"/>
+    <polygon class="cls-4" points="152.89 26.97 59.47 88.05 152.89 88.05 152.89 26.97"/>
+  </g>
+  <text class="cls-1" transform="translate(47.86 102.77)"><tspan x="0" y="0">Ba</tspan><tspan class="cls-3" x="34.68" y="0">c</tspan><tspan x="50.27" y="0">k</tspan><tspan x="9.13" y="28.8">and</tspan><tspan class="cls-3" x="1.42" y="57.6">f</tspan><tspan x="10.35" y="57.6">o</tspan><tspan class="cls-2" x="26.36" y="57.6">r</tspan><tspan x="38.2" y="57.6">th</tspan></text>
+</svg>
